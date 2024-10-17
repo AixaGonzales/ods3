@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido de Galletas Nutritivas</title>
+    <link rel="stylesheet" href="galletas.css">
+    <script src="galletas.js" defer></script>
+</head>
+
+<body>
+    <div class="animated-background"></div>
+    <header>
+        <div class="encabezado">
+            <img src="/imagenes/logoPrincipal.png" alt="logo de los 17 objetivos" class="logo">
+            <div class="contorno">
+                <input class="input" type="text" placeholder="Buscar...">
+                <button class="botom">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="hamburger" onclick="toggleHamburgerMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú para pantallas grandes -->
+    <section class="menu-section">
+        <nav class="menu" id="menu">
+            <ul>
+              <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/ods03.html">Bienestar y salud</a></li>
+            <li><a href="/html/accioness.html">Prácticas</a></li>
+            <li><a href="/html/biblioteca.html">Biblioteca</a></li>
+            <li><a href="/html/juegos.html">Juego</a></li>
+            <li><a href="/html/contacto.html">Noticias</a></li>
+            <li><a href="/galletas.html">Producto</a></li>
+            <li><a href="/html/contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Menú hamburguesa -->
+    <nav class="menu-hamburger" id="menuHamburger">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/ods03.html">Bienestar y salud</a></li>
+            <li><a href="/html/accioness.html">Prácticas</a></li>
+            <li><a href="/html/biblioteca.html">Biblioteca</a></li>
+            <li><a href="/html/juegos.html">Juego</a></li>
+            <li><a href="/html/contacto.html">Noticias</a></li>
+            <li><a href="/galletas.html">Producto</a></li>
+            <li><a href="/html/contacto.html">Contactos</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2 class="titulo" >¡¡¡Realiza tus pedidos ya!!!</h2>
+        <form id="formularioPedido" onsubmit="return validarFormulario()">
+
+            <span class="error" id="errorNombre"></span>
+            <input class="pregunta" type="text" id="nombre" name="nombre" placeholder="Nombre completo" >
+
+
+            <span class="error" id="errorTelefono"></span>
+            <input class="pregunta" type="text" id="telefono" name="telefono" placeholder="Teléfono" >
+
+
+            <span class="error" id="errorEmail"></span>
+            <input class="pregunta" type="text" id="email" name="email" placeholder="Correo electrónico" >
+
+            <span class="error" id="errorCantidad"></span>
+            <input class="pregunta" type="number" id="cantidad" name="cantidad" min="1" placeholder="Número de paquetes">
+
+
+            <label class="subtitulo" for="Fecha de entrega">Fecha de entrega</label>
+            <span class="error" id="errorFecha"></span>
+            <input class="pregunta" type="date" id="calendario" placeholder="Fecha de entrega" >
+
+            <br>
+            <br>
+            <center>
+                <button class="enviar" type="submit">Hacer Pedido</button>
+            </center>
+        </form>
+    </div>
+
+</body>
+
+</html>

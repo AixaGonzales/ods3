@@ -1,0 +1,238 @@
+      body {
+            background-color: rgb(125, 227, 231);
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Header */
+        .encabezado {
+            background-color: #063B3B;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            max-height: 70px;
+        }
+
+        .contorno {
+            display: flex;
+        }
+
+        .input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 10px 0 0 10px;
+            border: 0;
+            outline: none;
+        }
+
+        .botom {
+            background-color: #39938b;
+            padding: 10px;
+            border: 0;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .botom:hover {
+            background-color: #2b766f;
+        }
+
+        .menu-section {
+            background-color: #052a34;
+            padding: 20px 0;
+            margin: 20px auto;
+            border: 2px solid #39938b;
+            width: 100%; /* Ocupar todo el ancho */
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .menu ul li {
+            margin: 0 15px; 
+            flex: 1; 
+        }
+
+        .menu ul li a {
+            display: block;
+            color: #fff;
+            background-color: #39938b;
+            text-decoration: none;
+            padding: 15px 0;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+        }
+
+        .menu ul li a:hover {
+            background-color: #2b766f;
+            color: #fff;
+        }
+
+        /* Menú hamburguesa */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        /* Menú hamburguesa desplegado */
+        .menu-hamburger {
+            display: none;
+            flex-direction: column;
+            background-color: #063B3B;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .menu-hamburger.active {
+            display: flex;
+        }
+
+        .menu-hamburger ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-hamburger ul li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #70c1c1;
+            border-radius: 10px;
+        }
+
+        .menu-hamburger ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            /* Ocultar menú principal en pantallas pequeñas */
+            .menu-section {
+                display: none;
+            }
+
+            /* Mostrar menú hamburguesa */
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .input {
+                width: 100%;
+            }
+
+            .botom {
+                width: 100%;
+            }
+        }
+
+        /* Estilo de las tarjetas */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
+            gap: 20px; /* Espacio entre tarjetas */
+            width: 100%; /* Ocupa todo el ancho de la página */
+            padding: 20px; /* Espacio alrededor del contenedor */
+            box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        }
+
+        .card {
+            display: flex; /* Uso de flexbox para la tarjeta */
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+
+        .card-image {
+            width: 150px; /* Ancho de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column; /* Para que el contenido esté en columna */
+            justify-content: center; /* Centrar el contenido verticalmente */
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .card-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .card-paragraph {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #389292;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: auto; /* Asegura que el botón esté al final */
+        }
+
+        .card-button:hover {
+            background-color: #1a8279;
+        }
+
+        /*Imgen portada*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 60vh;
+    background-image: url(/imagenes/haciendo\ ejercicios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+
+}
